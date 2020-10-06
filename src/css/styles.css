@@ -3,45 +3,65 @@
 }
 
 body{
-  background: #011826;
+  background: #fff;
   color: #eee;
   font-family: 'Montserrat', sans-serif;
+  margin:0px;
 }
 
 ul {
   list-style: none;
 }
-
-.container {
+/* Grid styles */
+#container {
   display: grid;
   width: 100vw;
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* min-width: 0; */
+  
   
 }
 
 .left-column-pic {
-  background: #eee;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* height: 100%; */
+  /* grid-area: 1 / 1 / span 2 / span 1; */
   grid-column: 1;
   grid-row: 1 / span 2;
 }
 
-
-
-
-.middle-column-img {
-  grid-column: 2;
-  grid-row: 2 / span 2;
-  background: #eee;
+.left-column-info{
+  grid-column: 1;
+  grid-row: 3 / span 1;
+  background: #fff;
+  color: black;
+  
 }
 
+.middle-column-img {
+  grid-area: 2 / 2 / span 2 / span 1;
+  
+}
 
 .right-column {
   grid-area: 1 / 3 / span 3 / span 1;
   background: #011826;
   position: relative;
+  height: 100vh;
 }
-
+/* General Styles */
+.header {
+  padding: 15px;
+  margin-bottom: 0px;
+}
+.paragraph {
+  margin-top: 0px;
+  padding: 15px;
+}
 /* Right Column Styles */
 .navigation {
   text-transform: uppercase;
@@ -63,21 +83,34 @@ ul {
   
 }
 
-.about-me{
+.about-me {
   padding: 20px;
   text-align: center;
   
 }
-.social-icons{
+.social-icons {
   position: absolute;
   bottom:20px;
   color: rgb(194, 191, 191);
 }
 
-.icons{
+.icons {
   color: rgb(194, 191, 191);
-  margin: 0 8px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /* Left Column Styles */
+.middle-column-info {
+  background: #fff;
+  text-align: left;
+  color: black;
+  
+}
+
+.container > div > img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+
